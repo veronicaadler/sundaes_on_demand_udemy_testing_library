@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ScoopOption from './ScoopOptions';
+import ToppingOption from './ToppingOptions';
 
 export default function Options({optionType}) {
     const [items, setItems] = useState([]);
