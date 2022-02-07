@@ -5,9 +5,10 @@ import SummaryForm from '../SummaryForm';
         test('that the checkbox is unchecked by default', () => {
             render(<SummaryForm />)
             const checkbox = screen.getByRole('checkbox', { name: /i agree to terms and conditions/i})
-            expect(checkbox).toBeEnabled()
+            expect(checkbox).not.toBeChecked()
         })
         test('that the button starts off disabled', () => {
+            render(<SummaryForm />)
             const button = screen.getByRole('button', { name: /confirm order/i})
             expect(button).toBeDisabled()
         })
